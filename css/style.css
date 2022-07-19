@@ -1,0 +1,119 @@
+:root {
+    --cor-creme: hsl(30, 38%, 92%);
+    --branco: hsl(0, 0%, 100%);
+    --cinza: hsl(228, 12%, 48%);
+    --fonte-montserrat: 'Montserrat', serif;
+    --font-fraunce: 'Fraunces', serif;
+    --verde: hsl(158, 36%, 37%);
+    --verde-escuro:hsl(158, 36%, 30%);
+    --azul-escuro: hsl(212, 21%, 14%);
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    background: var(--cor-creme);
+    font-size: 14px;
+}
+
+.card {
+    padding-bottom: 2em;
+    margin: 5em 1em;
+    background: var(--branco);
+    border-radius: 10px;
+}
+
+.card_image-mobile {
+    width: 89vw;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.card_image-desktop {
+    display: none;
+}
+
+.content {
+    padding: 0.5em 1.5em;
+}
+
+.perfume {
+    font-family: var(--fonte-montserrat);
+    font-weight: 500;
+    font-size: 14px;
+    color: var(--cinza);
+    text-transform: uppercase;
+}
+
+.perfume_nome {
+    color: var(--azul-escuro);
+    font-family: var(--font-fraunce);
+    font-size: 35px;
+    line-height: 100%;
+}
+
+.descricao {
+    font-size: 16px;
+    font-family: var(--fonte-montserrat);
+    line-height: 160%;
+    color: var(--cinza);
+}
+
+.prices {
+    display: flex;
+}
+
+.price_a {
+    font-weight: 700;
+    font-family: var(--font-fraunce);
+    color: var(--verde);
+    padding-right: 1em;
+    margin: 0;
+    font-size: 35px;
+}
+
+.price_b {
+    color: var(--cinza);
+    text-decoration: line-through;
+    font-size: 16px;
+}
+
+.card_button {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    border-radius: 10px;
+    background: var(--verde);
+}
+
+.card_title {
+    padding-left: 1em;
+    color: var(--branco);
+    font-family: var(--fonte-montserrat);
+    font-weight: 700;
+}
+
+@media screen and (min-width: 1440px) {
+    .card {
+        padding: 0;
+        justify-content: center;
+        display: flex;
+        width: min-content;
+    }
+
+    .card_image-mobile {
+        display: none;
+    }
+
+    .card_image-desktop {
+        display: inline-block;
+        width: 30vw;
+        height: 30vw;
+        border-bottom-left-radius: 10px;
+        border-top-left-radius: 10px;
+    }
+
+    .card_button:hover {
+        background: var(--verde-escuro);
+    }
+}
